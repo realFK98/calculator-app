@@ -34,15 +34,19 @@ const App = function () {
     setTotal((ans + Number(curPrice)).toFixed(2));
   };
 
-  const isSelect = function (e) {
-    e.classList.remove('bg-[#00494D]');
-    e.classList.add('bg-[#3098A1]');
+  const isSelect = function ({classList}) {
+    classList.remove('bg-[#00494D]');
+    classList.add('bg-[#3098A1]');
+    classList.remove('text-[#F4FAFA]');
+    classList.add('text-[#00494D]');
   };
 
   const clearSelect = function () {
-    document.querySelectorAll('.bn-tip').forEach((tip) => {
-      tip.classList.remove('bg-[#3098A1]');
-      tip.classList.add('bg-[#00494D]');
+    document.querySelectorAll('.bn-tip').forEach(({classList}) => {
+      classList.remove('bg-[#3098A1]');
+      classList.add('bg-[#00494D]');
+      classList.add('text-[#F4FAFA]');
+      classList.remove('text-[#00494D]');
     });
   };
 
