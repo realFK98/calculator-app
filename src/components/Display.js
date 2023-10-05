@@ -1,11 +1,7 @@
-export default function DisplayAns({ titel, show }) {
+export default function Display({children}) {
   return (
-    <div className="tip-amount h-1/3 flex">
-      <p className="text-white text-[16px] w-1/2">
-        {titel} <br />
-        <spen className="text-[14px] text-zinc-300">/ person</spen>
-      </p>
-      <p className="w-1/2 text-[30px] text-right text-[#3098A1]">${show}</p>
+    <div className="display h-full rounded-[20px]  bg-black flex flex-col p-5 overflow-hidden">
+      {children}
     </div>
   );
 }
