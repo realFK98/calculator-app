@@ -74,7 +74,10 @@ const App = function () {
             />
           ))}
           <InputCustom
-            onHandelChange={({target}) => setSelectTip(target.value)}
+            onHandelChange={({target}) => {
+              setSelectTip(target.value);
+              clearSelect();
+            }}
             value={selectTip}
           />
         </div>
